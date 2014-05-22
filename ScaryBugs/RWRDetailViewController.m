@@ -7,6 +7,8 @@
 //
 
 #import "RWRDetailViewController.h"
+#import "RWTScaryBugData.h"
+
 
 @interface RWRDetailViewController ()
 - (void)configureView;

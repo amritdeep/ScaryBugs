@@ -1,15 +1,15 @@
 //
-//  RW RWTScaryBugDoc.m
+//  RWTScaryBugDoc.m
 //  ScaryBugs
 //
 //  Created by New iMac on 5/22/14.
 //
 //
 
-#import "RW RWTScaryBugDoc.h"
+#import "RWTScaryBugDoc.h"
 #import "RWTScaryBugData.h"
 
-@implementation RW_RWTScaryBugDoc
+@implementation RWTScaryBugDoc
 
 @synthesize data = _data;
 @synthesize thumbImage = _thumbImage;
