@@ -22,6 +22,8 @@
 		91CDDD72192DF6F700CE4A70 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91CDDD51192DF6F700CE4A70 /* UIKit.framework */; };
 		91CDDD7A192DF6F700CE4A70 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 91CDDD78192DF6F700CE4A70 /* InfoPlist.strings */; };
 		91CDDD7C192DF6F700CE4A70 /* ScaryBugsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDDD7B192DF6F700CE4A70 /* ScaryBugsTests.m */; };
+		91CDDD8C192E01DA00CE4A70 /* RWTScaryBugData.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDDD8B192E01DA00CE4A70 /* RWTScaryBugData.m */; };
+		91CDDD8F192E041600CE4A70 /* RW RWTScaryBugDoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CDDD8E192E041600CE4A70 /* RW RWTScaryBugDoc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,10 @@
 		91CDDD77192DF6F700CE4A70 /* ScaryBugsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ScaryBugsTests-Info.plist"; sourceTree = "<group>"; };
 		91CDDD79192DF6F700CE4A70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		91CDDD7B192DF6F700CE4A70 /* ScaryBugsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScaryBugsTests.m; sourceTree = "<group>"; };
+		91CDDD8A192E01DA00CE4A70 /* RWTScaryBugData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWTScaryBugData.h; sourceTree = "<group>"; };
+		91CDDD8B192E01DA00CE4A70 /* RWTScaryBugData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWTScaryBugData.m; sourceTree = "<group>"; };
+		91CDDD8D192E041600CE4A70 /* RW RWTScaryBugDoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RW RWTScaryBugDoc.h"; sourceTree = "<group>"; };
+		91CDDD8E192E041600CE4A70 /* RW RWTScaryBugDoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RW RWTScaryBugDoc.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,10 @@
 		91CDDD86192DF98D00CE4A70 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				91CDDD8A192E01DA00CE4A70 /* RWTScaryBugData.h */,
+				91CDDD8B192E01DA00CE4A70 /* RWTScaryBugData.m */,
+				91CDDD8D192E041600CE4A70 /* RW RWTScaryBugDoc.h */,
+				91CDDD8E192E041600CE4A70 /* RW RWTScaryBugDoc.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -270,9 +280,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CDDD8C192E01DA00CE4A70 /* RWTScaryBugData.m in Sources */,
 				91CDDD64192DF6F700CE4A70 /* RWRMasterViewController.m in Sources */,
 				91CDDD67192DF6F700CE4A70 /* RWRDetailViewController.m in Sources */,
 				91CDDD5E192DF6F700CE4A70 /* RWRAppDelegate.m in Sources */,
+				91CDDD8F192E041600CE4A70 /* RW RWTScaryBugDoc.m in Sources */,
 				91CDDD5A192DF6F700CE4A70 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
