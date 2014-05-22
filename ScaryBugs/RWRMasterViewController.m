@@ -10,12 +10,17 @@
 
 #import "RWRDetailViewController.h"
 
+#import "RWTScaryBugData.h"
+#import "RWTScaryBugDoc.h"
+
 @interface RWRMasterViewController () {
     NSMutableArray *_objects;
 }
 @end
 
 @implementation RWRMasterViewController
+
+@synthesize bugs = _bugs;
 
 - (void)awakeFromNib
 {
@@ -30,6 +35,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    self.title = @"Scary Bugs";
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,16 +63,23 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+//    return _objects.count;
+    return _bugs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyBasicCell"];
+    
+    RWTScaryBugDoc *bug = [self.bugs objectAtIndex:indexPath.row];
+    cell.textLabel = bug.data.title;
+    cell.imageView = bug.thumbImage;
+    return  cell;
+    
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
-    return cell;
+//    NSDate *object = _objects[indexPath.row];
+//    cell.textLabel.text = [object description];
+//    return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

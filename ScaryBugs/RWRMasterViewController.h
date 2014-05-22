@@ -10,4 +10,6 @@
 
 @interface RWRMasterViewController : UITableViewController
 
+@property (strong) NSMutableArray *bugs;
+
 @end
