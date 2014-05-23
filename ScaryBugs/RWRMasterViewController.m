@@ -72,8 +72,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyBasicCell"];
     
     RWTScaryBugDoc *bug = [self.bugs objectAtIndex:indexPath.row];
-    cell.textLabel = bug.data.title;
-    cell.imageView = bug.thumbImage;
+    cell.textLabel.text = bug.data.title;
+    cell.imageView.image = bug.thumbImage;
     return  cell;
     
 
