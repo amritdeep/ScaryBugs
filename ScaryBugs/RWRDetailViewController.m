@@ -49,4 +49,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)addPictureTapped:(id)sender {
+}
+
+- (IBAction)titleFieldTextChanged:(id)sender {
+}
 @end
