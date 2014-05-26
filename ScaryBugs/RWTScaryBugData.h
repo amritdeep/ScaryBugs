@@ -12,6 +12,8 @@
 
 @property (strong) NSString *title;
 @property (assign) float rating;
+@property (strong)  UIImage *fullImage;
+
 
 -(id) initWithTitle:(NSString*)title rating:(float)rating;
 

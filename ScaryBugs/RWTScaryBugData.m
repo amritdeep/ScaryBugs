@@ -12,6 +12,7 @@
 
 @synthesize title = _title;
 @synthesize rating = _rating;
+@synthesize fullImage = _fullImage;
 
 -(id) initWithTitle:(NSString*)title rating:(float)rating
 {

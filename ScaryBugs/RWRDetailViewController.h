@@ -11,9 +11,9 @@
 
 @class RWTScaryBugDoc;
 
-@interface RWRDetailViewController : UIViewController
+@interface RWRDetailViewController : UIViewController <UITextFieldDelegate, RWTRateViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) RWTScaryBugDoc *detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 //@property (strong)  NSMutableArray *bugs;
 @property (weak, nonatomic) IBOutlet UILabel *titleField;
