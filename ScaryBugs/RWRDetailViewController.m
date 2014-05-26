@@ -46,7 +46,7 @@
     if (self.detailItem) {
         self.titleField.text = self.detailItem.data.title;
         self.rateView.rating = self.detailItem.data.rating;
-//        self.imageView.image = self.detailItem.data.fullImage;
+        self.imageView.image = self.detailItem.data.fullImage;
     }
 }
 - (void)viewDidLoad
@@ -63,6 +63,27 @@
 }
 
 - (IBAction)addPictureTapped:(id)sender {
+    if (self.picker == nil) {
+        self.picker = [[UIImagePickerController alloc] init];
+        self.picker.delegate = self;
+        self.picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        self.picker.allowsEditing = NO;
+    }
+}
+
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    UIImage *fullImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *thumbImage = [fullImage imageByScalingAndCroppingForSize:CGSizeMake(44, 44)];
+    self.detailItem.fullImage = fullImage;
+    self.detailItem.thumbImage = thumbImage;
+    self.imageView.image = fullImage;
 }
 
 - (IBAction)titleFieldTextChanged:(id)sender {
@@ -74,6 +95,7 @@
 
 - (BOOL)textFieldTextChanged:(id)sender {
     self.detailItem.data.title = self.titleField.text;
+    return  YES;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -84,6 +106,5 @@
 - (void)rateView:(RWTRateView *)rateView ratingDidChange:(float)rating {
     self.detailItem.data.rating = rating;
 }
-
 
 @end
